@@ -18,7 +18,10 @@ app.use(express.json()); //middleware to parse json
 app.use("/api", require("../routes/userRoutes"));
 
 
-// article routes 
+// article routes
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 
 app.use("/api/articles", require("../routes/articleRoutes"));
 
